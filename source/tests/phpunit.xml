@@ -1,0 +1,21 @@
+<phpunit bootstrap="./application/bootstrap.php" colors="true">
+	<testsuite name="Precision Tests">
+		<directory>./</directory>
+	</testsuite>	
+	<filter>
+		<whitelist>
+			<directory suffix=".php">../application</directory>
+			<exclude>
+                <directory suffix=".phtml">../application</directory>
+                <directory>../application/models/DbTable/</directory>
+			</exclude>
+		</whitelist>
+	</filter>
+	
+	<logging>
+         <log type="coverage-xml" target="../../build/log/clover.xml" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50"  highLowerBound="80" />
+		<log type="coverage-clover" target="../../log/build/phpunit/report" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50"  highLowerBound="80" />
+		<log type="coverage-html" target="../../log/build/phpunit/report" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50"  highLowerBound="80" />
+		<log type="testdox" target="../../blog/build/phpunit/testdox.html" />
+	</logging>
+</phpunit>

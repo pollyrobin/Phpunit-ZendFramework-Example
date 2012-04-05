@@ -1,0 +1,18 @@
+<h1>Beschikbare blogs</h1>
+<?php if ($this->blogs->count() != 0): ?>
+
+<?php foreach($this->blogs as $blog): ?>
+<div class="blog">
+    <div class="blog-title">
+        <?php echo $blog->title; ?>
+    </div>
+    <div class="blog-content">
+        <?php echo $blog->text; ?>
+        <a href="/blog/detail/id/<?php echo $blog->id ?>">Lees meer</a>
+    </div>
+</div>
+<?php endforeach; ?>
+<a href="/blog/add/">Nog een blog toevoegen</a>
+<?php else: ?>
+<p class="notice">Er zijn geen blogs beschikbaar klik <a href="/blog/index/add/">hier</a> om een blog toe te voegen.</p>
+<?php endif; ?>
