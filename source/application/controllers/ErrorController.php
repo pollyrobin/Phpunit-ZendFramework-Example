@@ -38,10 +38,16 @@ class ErrorController extends Zend_Controller_Action
 
     public function getLog()
     {
+        // Logger should not be initialized when in testing environment
+        if (APPLICATION_ENV === 'testing') {
+            return;
+        }
+
         $bootstrap = $this->getInvokeArg('bootstrap');
         if (!$bootstrap->hasPluginResource('Log')) {
             return false;
         }
+
         $log = $bootstrap->getResource('Log');
         return $log;
     }
