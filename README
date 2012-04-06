@@ -1,0 +1,4 @@
+This is an template to practice PHPUnit in combination with Zend_Framework
+
+Tests can be found in source/tests/
+PHPUnit output will be outputted to phpunit/
