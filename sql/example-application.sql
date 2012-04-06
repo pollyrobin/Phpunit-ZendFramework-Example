@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTS `phpunitexample`;
 
 CREATE DATABASE `phpunitexample`;
 
+USE `phpunitexample`;
+
 DROP TABLE IF EXISTS `blog`;
 
 CREATE TABLE `blog` (
