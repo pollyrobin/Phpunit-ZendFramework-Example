@@ -9,8 +9,8 @@
                 <directory suffix=".phtml">../application</directory>
                 <directory>../application/forms/</directory>
                 <directory>../application/models/DbTable/</directory>
-				<file>../application/ErrorController.php</file>
-				<file>../application/IndexController.php</file>
+				<file>../application/controllers/ErrorController.php</file>
+				<file>../application/controllers/IndexController.php</file>
 			</exclude>
 		</whitelist>
 	</filter>
