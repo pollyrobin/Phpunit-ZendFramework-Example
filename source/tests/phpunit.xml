@@ -14,8 +14,8 @@
 	</filter>
 	
 	<logging>
+        <log type="coverage-html" target="../../phpunit/report" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50"  highLowerBound="80" />
         <log type="junit" target="../../phpunit/junit.xml" />
         <log type="coverage-clover" target="../../phpunit/clover.xml" />
-        <log type="coverage-html" target="../../phpunit/report" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50"  highLowerBound="80" />
 	</logging>
 </phpunit>
